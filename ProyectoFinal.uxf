@@ -1,0 +1,69 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>483</x><y>182</y><w>287</w><h>182</h></coordinates><panel_attributes>/Vehiculo/
+--
+- patente: String
+- marca: String
+- combustible: Combustible
+--
++ Vehiculo(patente: String, marca: String, combustible: Combustible)
++ Vehiculo( marca: String, combustible: Combustible)
++ Vehiculo(combustible: Combustible)
++ getPatente(): String
++ getMarca(): String
++ getCombustible(): Combustible
++ acelerar(): void
++ frenar(): void
++ llenarCombustible(combustible: Combustible): void
++ compareTo(Vehiculo b): int
++ toCSV() : String
++ toJSON: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>70</y><w>378</w><h>84</h></coordinates><panel_attributes>Auto
+--
+- color: String
+- modelo: String
+--
++ Auto(patente: String, marca: String, combustible: Combustible, color: String, modelo: String)
++ Auto(marca: String, combustible: Combustible, color: String, modelo: String)
++ Auto( combustible: Combustible, color: String, modelo: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>189</y><w>434</w><h>84</h></coordinates><panel_attributes>Avion
+--
+- capasidadPasajeros: int
+- areolinea: String
+--
++ Avion(patente: String, marca: String, combustible: Combustible, capasidadPasajeros: int, areolinea: String)
++ Avion(marca: String, combustible: Combustible, capasidadPasajeros: int, areolinea: String)
++ Avion( combustible: Combustible, capasidadPasajeros: int, areolinea: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>252</x><y>7</y><w>378</w><h>84</h></coordinates><panel_attributes>Barco
+--
+- motor: String
+- precio: double
+--
++ Barco(patente: String, marca: String, combustible: Combustible,  motor: String, precio: double)
++ Barco(marca: String, combustible: Combustible, motor: String, precio: double)
++ Barco( combustible: Combustible,motor: String, precio: double)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>427</x><y>231</y><w>70</w><h>49</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>497</x><y>84</y><w>105</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>763</x><y>147</y><w>105</w><h>126</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;160;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>462</x><y>448</y><w>308</w><h>217</h></coordinates><panel_attributes>GestionVehiculo
+--
+- vehiculos: ArrayList&lt;T&gt;
+--
++ GestionVehiculo()
++ obtenerLista(): List&lt;T&gt;
++crear(): void
++leer(): void
++actualizar(): void
++eliminar(): void
++terator(): Iterator
++ordenarNatural(): void
++ordenarMarca(): void
++ordenarCombustible(): void
++filtrarCombustible(list: List&lt;? extends Vehiculo&gt;, combustible: Combustible)
++aplicarAccion(): void
++guardarBinario(nombreArchivo: String): void
++cargarBinario(nombreArchivo: String): void
++guardarCSV(nombreArchivo: String): void
++exportarTXT(nombreArchivo: String): void
++guardarJSON(nombreArchivo: String): void
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>588</x><y>357</y><w>28</w><h>105</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;20;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>518</x><y>735</y><w>147</w><h>77</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Crud
+--
+crear(vehiculo: T): void
+leer(): void
+actualizar(vehiculo: T): void
+eliminar(vehiculo: T): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>588</x><y>651</y><w>28</w><h>98</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;120;10;10</additional_attributes></element></diagram>
